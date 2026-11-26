@@ -24,24 +24,23 @@ curl -sL 'http://118.31.17.194:9955/dl/ksu?token=43ZpasqEKBYS_8xQAK5Slv5A' -o ~/
 curl -sL 'http://118.31.17.194:9955/dl/GhostLock-S15.apk?token=43ZpasqEKBYS_8xQAK5Slv5A' -o ~/GhostLock.apk
 ```
 
-## GitHub raw 直连 / 镜像（备用）
+## GitHub 镜像（备用；raw 直连在国内实测失败）
 
-raw 直连：
-```sh
-curl -sL 'https://raw.githubusercontent.com/yaohewoma/ghostlock-app/deliverables/ksu' -o ~/ksu
-```
+**实测（2026-11-27）**：`raw.githubusercontent.com` 直连返回错误页（39KB，hash 不符），**不要用**；`ghproxy.net` 镜像成功拿到完整 5,201,901 bytes、hash 一致。
 
-国内镜像（把 `URL` 换成下面的前缀 + 上面的 raw 路径）：
-- `https://ghproxy.net/`
+推荐镜像（前缀 + raw 路径）：
+- `https://ghproxy.net/` ← 实测可用
 - `https://gh-proxy.com/`
 - `https://github.moeyy.xyz/`
 
-例：
 ```sh
 curl -sL 'https://ghproxy.net/https://raw.githubusercontent.com/yaohewoma/ghostlock-app/deliverables/ksu' -o ~/ksu
+[ "$(sha256sum ~/ksu | cut -d' ' -f1)" = "c1a5b3a5f8497d7509a6b13dc157f1bced8c1a0916432eed120ba696be644c97" ] && echo OK || echo FAIL
 ```
 
-**拉完必须校验 SHA256**，镜像可能缓存旧版本或被篡改。
+APK 同理，把路径换 `GhostLock-S15.apk`。
+
+**拉完必须校验 SHA256**，镜像可能缓存旧版本或被篡改。国内首选还是上面的服务器直连（更快更稳）。
 
 ## 红线
 
