@@ -28,6 +28,11 @@
 #include "feature/shell_su_adb_only.h"
 #include "../infra/s15_shim.h"
 
+/* 4.14 does not define fallthrough in compiler.h */
+#ifndef fallthrough
+#define fallthrough __attribute__((fallthrough))
+#endif
+
 #define FILE_MAGIC 0x7f4b5355 // ' KSU', u32
 #define FILE_FORMAT_VERSION 4 // u32
 
