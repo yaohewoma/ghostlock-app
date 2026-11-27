@@ -133,7 +133,7 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
 -- KernelSU: Git repo detected at /home/runner/work/ghostlock-app/ghostlock-app
--- KernelSU version: 30009
+-- KernelSU version: 30011
 -- KSU_NEW_DCACHE_FLUSH: 0
 -- KernelSU Manager package name: me.weishu.kernelsu
 -- KernelSU Manager signature size: 0x033b
@@ -167,13 +167,17 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/feature.o
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/runtime/boot_event.o
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/runtime/ksud_integration.o
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.c: In function ‘migrate_profile’:
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.c:506:9: error: ‘fallthrough’ undeclared (first use in this function)
-  506 |         fallthrough;
-      |         ^~~~~~~~~~~
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.c:506:9: note: each undeclared identifier is reported only once for each function it appears in
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.c: At top level:
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/selinux/selinux.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/selinux/rules.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/selinux/sepolicy.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/sulog/event.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/sulog/fd.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/supercall/dispatch.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/supercall/perm.o
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/sulog/fd.c:23:8: error: unknown type name ‘__poll_t’
+   23 | static __poll_t ksu_sulog_poll(struct file *file, poll_table *wait)
+      |        ^~~~~~~~
 cc1: note: unrecognized command-line option ‘-Wno-gcc-compat’ may have been intended to silence earlier diagnostics
-make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.o] Error 1
+make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/sulog/fd.o] Error 1
 make[1]: *** Waiting for unfinished jobs....
 make: *** [Makefile:1748: _module_/home/runner/work/ghostlock-app/ghostlock-app/kernel_module] Error 2

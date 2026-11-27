@@ -1,6 +1,6 @@
 == [1/6] fetch 4.14 kernel tree
 Cloning into '/home/runner/work/ghostlock-app/ghostlock-app/work/kernel'...
-Updating files:  31% (28034/89653)Updating files:  32% (28689/89653)Updating files:  33% (29586/89653)Updating files:  34% (30483/89653)Updating files:  35% (31379/89653)Updating files:  36% (32276/89653)Updating files:  37% (33172/89653)Updating files:  38% (34069/89653)Updating files:  39% (34965/89653)Updating files:  40% (35862/89653)Updating files:  41% (36758/89653)Updating files:  42% (37655/89653)Updating files:  43% (38551/89653)Updating files:  44% (39448/89653)Updating files:  45% (40344/89653)Updating files:  46% (41241/89653)Updating files:  47% (42137/89653)Updating files:  48% (43034/89653)Updating files:  49% (43930/89653)Updating files:  50% (44827/89653)Updating files:  51% (45724/89653)Updating files:  52% (46620/89653)Updating files:  53% (47517/89653)Updating files:  54% (48413/89653)Updating files:  55% (49310/89653)Updating files:  56% (50206/89653)Updating files:  56% (50413/89653)Updating files:  57% (51103/89653)Updating files:  58% (51999/89653)Updating files:  59% (52896/89653)Updating files:  60% (53792/89653)Updating files:  61% (54689/89653)Updating files:  62% (55585/89653)Updating files:  63% (56482/89653)Updating files:  64% (57378/89653)Updating files:  65% (58275/89653)Updating files:  66% (59171/89653)Updating files:  67% (60068/89653)Updating files:  68% (60965/89653)Updating files:  69% (61861/89653)Updating files:  70% (62758/89653)Updating files:  71% (63654/89653)Updating files:  72% (64551/89653)Updating files:  73% (65447/89653)Updating files:  74% (66344/89653)Updating files:  75% (67240/89653)Updating files:  76% (68137/89653)Updating files:  77% (69033/89653)Updating files:  77% (69319/89653)Updating files:  78% (69930/89653)Updating files:  79% (70826/89653)Updating files:  80% (71723/89653)Updating files:  81% (72619/89653)Updating files:  82% (73516/89653)Updating files:  83% (74412/89653)Updating files:  84% (75309/89653)Updating files:  85% (76206/89653)Updating files:  86% (77102/89653)Updating files:  87% (77999/89653)Updating files:  88% (78895/89653)Updating files:  89% (79792/89653)Updating files:  90% (80688/89653)Updating files:  91% (81585/89653)Updating files:  92% (82481/89653)Updating files:  93% (83378/89653)Updating files:  94% (84274/89653)Updating files:  95% (85171/89653)Updating files:  96% (86067/89653)Updating files:  97% (86964/89653)Updating files:  97% (87453/89653)Updating files:  98% (87860/89653)Updating files:  99% (88757/89653)Updating files: 100% (89653/89653)Updating files: 100% (89653/89653), done.
+Updating files:  17% (15326/89653)Updating files:  18% (16138/89653)Updating files:  19% (17035/89653)Updating files:  20% (17931/89653)Updating files:  21% (18828/89653)Updating files:  22% (19724/89653)Updating files:  23% (20621/89653)Updating files:  24% (21517/89653)Updating files:  25% (22414/89653)Updating files:  26% (23310/89653)Updating files:  27% (24207/89653)Updating files:  28% (25103/89653)Updating files:  29% (26000/89653)Updating files:  30% (26896/89653)Updating files:  30% (27632/89653)Updating files:  31% (27793/89653)Updating files:  32% (28689/89653)Updating files:  33% (29586/89653)Updating files:  34% (30483/89653)Updating files:  35% (31379/89653)Updating files:  36% (32276/89653)Updating files:  37% (33172/89653)Updating files:  38% (34069/89653)Updating files:  39% (34965/89653)Updating files:  39% (35214/89653)Updating files:  40% (35862/89653)Updating files:  41% (36758/89653)Updating files:  42% (37655/89653)Updating files:  43% (38551/89653)Updating files:  44% (39448/89653)Updating files:  45% (40344/89653)Updating files:  46% (41241/89653)Updating files:  47% (42137/89653)Updating files:  48% (43034/89653)Updating files:  49% (43930/89653)Updating files:  50% (44827/89653)Updating files:  51% (45724/89653)Updating files:  52% (46620/89653)Updating files:  53% (47517/89653)Updating files:  53% (48338/89653)Updating files:  54% (48413/89653)Updating files:  55% (49310/89653)Updating files:  56% (50206/89653)Updating files:  57% (51103/89653)Updating files:  58% (51999/89653)Updating files:  59% (52896/89653)Updating files:  60% (53792/89653)Updating files:  61% (54689/89653)Updating files:  62% (55585/89653)Updating files:  63% (56482/89653)Updating files:  64% (57378/89653)Updating files:  65% (58275/89653)Updating files:  65% (59087/89653)Updating files:  66% (59171/89653)Updating files:  67% (60068/89653)Updating files:  68% (60965/89653)Updating files:  69% (61861/89653)Updating files:  70% (62758/89653)Updating files:  71% (63654/89653)Updating files:  72% (64551/89653)Updating files:  73% (65447/89653)Updating files:  74% (66344/89653)Updating files:  75% (67240/89653)Updating files:  76% (68137/89653)Updating files:  76% (68543/89653)Updating files:  77% (69033/89653)Updating files:  78% (69930/89653)Updating files:  79% (70826/89653)Updating files:  80% (71723/89653)Updating files:  81% (72619/89653)Updating files:  82% (73516/89653)Updating files:  83% (74412/89653)Updating files:  84% (75309/89653)Updating files:  85% (76206/89653)Updating files:  86% (77102/89653)Updating files:  87% (77999/89653)Updating files:  88% (78895/89653)Updating files:  88% (79790/89653)Updating files:  89% (79792/89653)Updating files:  90% (80688/89653)Updating files:  91% (81585/89653)Updating files:  92% (82481/89653)Updating files:  93% (83378/89653)Updating files:  94% (84274/89653)Updating files:  95% (85171/89653)Updating files:  96% (86067/89653)Updating files:  97% (86964/89653)Updating files:  98% (87860/89653)Updating files:  99% (88757/89653)Updating files: 100% (89653/89653)Updating files: 100% (89653/89653), done.
 # SPDX-License-Identifier: GPL-2.0
 VERSION = 4
 PATCHLEVEL = 14
@@ -14,21 +14,17 @@ CONFIG_MODVERSIONS=y
 CONFIG_KALLSYMS=y
 CONFIG_LOCALVERSION=""
 == [4/6] olddefconfig + modules_prepare
-      |     ^~~~~~~~~~~~~~~~~~~~~~
-scripts/sign-file.c:153:17: warning: ‘ENGINE_load_private_key’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
-  153 |                 private_key = ENGINE_load_private_key(e, private_key_name,
-      |                 ^~~~~~~~~~~
-In file included from scripts/sign-file.c:30:
-/usr/include/openssl/engine.h:638:11: note: declared here
-  638 | EVP_PKEY *ENGINE_load_private_key(ENGINE *e, const char *key_id,
-      |           ^~~~~~~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c:134:17: warning: ‘ENGINE_ctrl_cmd’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  134 |                 ENGINE_ctrl_cmd(e, "LOAD_CERT_CTRL", 0, &parms, NULL, 1);
+      |                 ^~~~~~~~~~~~~~~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:450:27: note: declared here
+  450 | OSSL_DEPRECATEDIN_3_0 int ENGINE_ctrl_cmd(ENGINE *e, const char *cmd_name,
+      |                           ^~~~~~~~~~~~~~~
+  HOSTLD  scripts/dtc/dtc
 == [5/6] feed real CRC symvers
 real symvers: 635 symbols
 == [6/6] build kernel_module
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SPEAKER_MUTE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MM_FEEDBACK
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TP_BSPFWUPDATE
-OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CHG_BASIC
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_VIRTUAL_RESERVE_MEMORY
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MEMLEAK_DETECT
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_MTUDETECT
@@ -61,7 +57,7 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
 -- KernelSU: Git repo detected at /home/runner/work/ghostlock-app/ghostlock-app
--- KernelSU version: 30009
+-- KernelSU version: 30011
 -- KSU_NEW_DCACHE_FLUSH: 0
 -- KernelSU Manager package name: me.weishu.kernelsu
 -- KernelSU Manager signature size: 0x033b
@@ -95,13 +91,17 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/feature.o
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/runtime/boot_event.o
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/runtime/ksud_integration.o
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.c: In function ‘migrate_profile’:
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.c:506:9: error: ‘fallthrough’ undeclared (first use in this function)
-  506 |         fallthrough;
-      |         ^~~~~~~~~~~
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.c:506:9: note: each undeclared identifier is reported only once for each function it appears in
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.c: At top level:
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/selinux/selinux.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/selinux/rules.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/selinux/sepolicy.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/sulog/event.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/sulog/fd.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/supercall/dispatch.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/supercall/perm.o
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/sulog/fd.c:23:8: error: unknown type name ‘__poll_t’
+   23 | static __poll_t ksu_sulog_poll(struct file *file, poll_table *wait)
+      |        ^~~~~~~~
 cc1: note: unrecognized command-line option ‘-Wno-gcc-compat’ may have been intended to silence earlier diagnostics
-make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.o] Error 1
+make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/sulog/fd.o] Error 1
 make[1]: *** Waiting for unfinished jobs....
 make: *** [Makefile:1748: _module_/home/runner/work/ghostlock-app/ghostlock-app/kernel_module] Error 2

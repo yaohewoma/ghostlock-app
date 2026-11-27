@@ -600,8 +600,8 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   WRAP    arch/arm64/include/generated/uapi/asm/sembuf.h
   WRAP    arch/arm64/include/generated/uapi/asm/shmbuf.h
   WRAP    arch/arm64/include/generated/uapi/asm/socket.h
-  WRAP    arch/arm64/include/generated/uapi/asm/swab.h
   WRAP    arch/arm64/include/generated/uapi/asm/sockios.h
+  WRAP    arch/arm64/include/generated/uapi/asm/swab.h
   WRAP    arch/arm64/include/generated/uapi/asm/termbits.h
   WRAP    arch/arm64/include/generated/uapi/asm/termios.h
   WRAP    arch/arm64/include/generated/uapi/asm/types.h
@@ -612,13 +612,13 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   WRAP    arch/arm64/include/generated/asm/div64.h
   WRAP    arch/arm64/include/generated/asm/dma.h
   WRAP    arch/arm64/include/generated/asm/dma-contiguous.h
-  CHK     include/generated/utsrelease.h
   WRAP    arch/arm64/include/generated/asm/early_ioremap.h
+  CHK     include/generated/utsrelease.h
   WRAP    arch/arm64/include/generated/asm/emergency-restart.h
   WRAP    arch/arm64/include/generated/asm/hw_irq.h
   WRAP    arch/arm64/include/generated/asm/irq_regs.h
-  UPD     include/generated/utsrelease.h
   WRAP    arch/arm64/include/generated/asm/kdebug.h
+  UPD     include/generated/utsrelease.h
   WRAP    arch/arm64/include/generated/asm/kmap_types.h
   WRAP    arch/arm64/include/generated/asm/local.h
   WRAP    arch/arm64/include/generated/asm/local64.h
@@ -640,111 +640,56 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   HOSTCC  scripts/basic/bin2c
   CHK     include/generated/timeconst.h
   CC      kernel/bounds.s
+  UPD     include/generated/timeconst.h
   HOSTCC  scripts/dtc/dtc.o
   HOSTCC  scripts/genksyms/genksyms.o
-  UPD     include/generated/timeconst.h
-  SHIPPED scripts/genksyms/parse.tab.c
+  CC      scripts/mod/empty.o
   CHK     include/generated/bounds.h
-  HOSTCC  scripts/dtc/flattree.o
   UPD     include/generated/bounds.h
   CC      arch/arm64/kernel/asm-offsets.s
-  CC      scripts/mod/empty.o
   HOSTCC  scripts/mod/mk_elfconfig
+  HOSTCC  scripts/dtc/flattree.o
   CC      scripts/mod/devicetable-offsets.s
-  SHIPPED scripts/genksyms/lex.lex.c
-  SHIPPED scripts/genksyms/parse.tab.h
-  HOSTCC  scripts/genksyms/parse.tab.o
   MKELF   scripts/mod/elfconfig.h
   CHK     scripts/mod/devicetable-offsets.h
   UPD     scripts/mod/devicetable-offsets.h
   HOSTCC  scripts/mod/sumversion.o
-  CHK     include/generated/asm-offsets.h
+  SHIPPED scripts/genksyms/parse.tab.c
+  SHIPPED scripts/genksyms/lex.lex.c
+  SHIPPED scripts/genksyms/parse.tab.h
+  HOSTCC  scripts/genksyms/parse.tab.o
+  HOSTCC  scripts/mod/modpost.o
   HOSTCC  scripts/dtc/fstree.o
+  HOSTCC  scripts/genksyms/lex.lex.o
+  HOSTCC  scripts/dtc/data.o
+  CHK     include/generated/asm-offsets.h
   UPD     include/generated/asm-offsets.h
   CALL    scripts/checksyscalls.sh
-  HOSTCC  scripts/dtc/data.o
   HOSTCC  scripts/selinux/genheaders/genheaders
-  HOSTCC  scripts/genksyms/lex.lex.o
-  HOSTCC  scripts/mod/modpost.o
   HOSTCC  scripts/dtc/livetree.o
   HOSTCC  scripts/selinux/mdp/mdp
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTLD  scripts/genksyms/genksyms
+  HOSTCC  scripts/kallsyms
   LDS     arch/arm64/kernel/vdso/vdso.lds
+  HOSTCC  scripts/dtc/treesource.o
   VDSOA   arch/arm64/kernel/vdso/gettimeofday.o
   VDSOA   arch/arm64/kernel/vdso/note.o
   VDSOA   arch/arm64/kernel/vdso/sigreturn.o
   LD      arch/arm64/kernel/vdso/vdso.so.dbg
   VDSOSYM include/generated/vdso-offsets.h
-  HOSTCC  scripts/dtc/treesource.o
-  HOSTLD  scripts/genksyms/genksyms
-  HOSTCC  scripts/mod/file2alias.o
   HOSTCC  scripts/dtc/srcpos.o
   HOSTCC  scripts/dtc/checks.o
-  HOSTCC  scripts/dtc/util.o
-  HOSTCC  scripts/kallsyms
-  SHIPPED scripts/dtc/dtc-lexer.lex.c
   HOSTCC  scripts/pnmtologo
-  SHIPPED scripts/dtc/dtc-parser.tab.h
-  SHIPPED scripts/dtc/dtc-parser.tab.c
-  HOSTCC  scripts/dtc/dtc-lexer.lex.o
-  HOSTCC  scripts/dtc/dtc-parser.tab.o
   HOSTLD  scripts/mod/modpost
   HOSTCC  scripts/sortextable
   HOSTCC  scripts/asn1_compiler
+  HOSTCC  scripts/dtc/util.o
   HOSTCC  scripts/sign-file
-  HOSTLD  scripts/dtc/dtc
-  HOSTCC  scripts/extract-cert
-scripts/extract-cert.c: In function ‘display_openssl_errors’:
-scripts/extract-cert.c:46:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
-   46 |         while ((e = ERR_get_error_line(&file, &line))) {
-      |         ^~~~~
-In file included from scripts/extract-cert.c:23:
-/usr/include/openssl/err.h:411:15: note: declared here
-  411 | unsigned long ERR_get_error_line(const char **file, int *line);
-      |               ^~~~~~~~~~~~~~~~~~
-scripts/extract-cert.c: In function ‘drain_openssl_errors’:
-scripts/extract-cert.c:59:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
-   59 |         while (ERR_get_error_line(&file, &line)) {}
-      |         ^~~~~
-In file included from scripts/extract-cert.c:23:
-/usr/include/openssl/err.h:411:15: note: declared here
-  411 | unsigned long ERR_get_error_line(const char **file, int *line);
-      |               ^~~~~~~~~~~~~~~~~~
-scripts/extract-cert.c: In function ‘main’:
-scripts/extract-cert.c:124:17: warning: ‘ENGINE_load_builtin_engines’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
-  124 |                 ENGINE_load_builtin_engines();
-      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from scripts/extract-cert.c:24:
-/usr/include/openssl/engine.h:358:28: note: declared here
-  358 | OSSL_DEPRECATEDIN_3_0 void ENGINE_load_builtin_engines(void);
-      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
-scripts/extract-cert.c:126:17: warning: ‘ENGINE_by_id’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
-  126 |                 e = ENGINE_by_id("pkcs11");
-      |                 ^
-In file included from scripts/extract-cert.c:24:
-/usr/include/openssl/engine.h:336:31: note: declared here
-  336 | OSSL_DEPRECATEDIN_3_0 ENGINE *ENGINE_by_id(const char *id);
-      |                               ^~~~~~~~~~~~
-scripts/extract-cert.c:128:17: warning: ‘ENGINE_init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
-  128 |                 if (ENGINE_init(e))
-      |                 ^~
-In file included from scripts/extract-cert.c:24:
-/usr/include/openssl/engine.h:620:27: note: declared here
-  620 | OSSL_DEPRECATEDIN_3_0 int ENGINE_init(ENGINE *e);
-      |                           ^~~~~~~~~~~
-scripts/extract-cert.c:133:25: warning: ‘ENGINE_ctrl_cmd_string’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
-  133 |                         ERR(!ENGINE_ctrl_cmd_string(e, "PIN", key_pass, 0), "Set PKCS#11 PIN");
-      |                         ^~~
-In file included from scripts/extract-cert.c:24:
-/usr/include/openssl/engine.h:479:5: note: declared here
-  479 | int ENGINE_ctrl_cmd_string(ENGINE *e, const char *cmd_name, const char *arg,
-      |     ^~~~~~~~~~~~~~~~~~~~~~
-scripts/extract-cert.c:134:17: warning: ‘ENGINE_ctrl_cmd’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
-  134 |                 ENGINE_ctrl_cmd(e, "LOAD_CERT_CTRL", 0, &parms, NULL, 1);
-      |                 ^~~~~~~~~~~~~~~
-In file included from scripts/extract-cert.c:24:
-/usr/include/openssl/engine.h:450:27: note: declared here
-  450 | OSSL_DEPRECATEDIN_3_0 int ENGINE_ctrl_cmd(ENGINE *e, const char *cmd_name,
-      |                           ^~~~~~~~~~~~~~~
+  SHIPPED scripts/dtc/dtc-lexer.lex.c
+  SHIPPED scripts/dtc/dtc-parser.tab.h
+  SHIPPED scripts/dtc/dtc-parser.tab.c
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
 scripts/sign-file.c: In function ‘display_openssl_errors’:
 scripts/sign-file.c:89:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
    89 |         while ((e = ERR_get_error_line(&file, &line))) {
@@ -797,3 +742,58 @@ In file included from scripts/sign-file.c:30:
 /usr/include/openssl/engine.h:638:11: note: declared here
   638 | EVP_PKEY *ENGINE_load_private_key(ENGINE *e, const char *key_id,
       |           ^~~~~~~~~~~~~~~~~~~~~~~
+  HOSTCC  scripts/extract-cert
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+scripts/extract-cert.c: In function ‘display_openssl_errors’:
+scripts/extract-cert.c:46:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+   46 |         while ((e = ERR_get_error_line(&file, &line))) {
+      |         ^~~~~
+In file included from scripts/extract-cert.c:23:
+/usr/include/openssl/err.h:411:15: note: declared here
+  411 | unsigned long ERR_get_error_line(const char **file, int *line);
+      |               ^~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c: In function ‘drain_openssl_errors’:
+scripts/extract-cert.c:59:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+   59 |         while (ERR_get_error_line(&file, &line)) {}
+      |         ^~~~~
+In file included from scripts/extract-cert.c:23:
+/usr/include/openssl/err.h:411:15: note: declared here
+  411 | unsigned long ERR_get_error_line(const char **file, int *line);
+      |               ^~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c: In function ‘main’:
+scripts/extract-cert.c:124:17: warning: ‘ENGINE_load_builtin_engines’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  124 |                 ENGINE_load_builtin_engines();
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:358:28: note: declared here
+  358 | OSSL_DEPRECATEDIN_3_0 void ENGINE_load_builtin_engines(void);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c:126:17: warning: ‘ENGINE_by_id’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  126 |                 e = ENGINE_by_id("pkcs11");
+      |                 ^
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:336:31: note: declared here
+  336 | OSSL_DEPRECATEDIN_3_0 ENGINE *ENGINE_by_id(const char *id);
+      |                               ^~~~~~~~~~~~
+scripts/extract-cert.c:128:17: warning: ‘ENGINE_init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  128 |                 if (ENGINE_init(e))
+      |                 ^~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:620:27: note: declared here
+  620 | OSSL_DEPRECATEDIN_3_0 int ENGINE_init(ENGINE *e);
+      |                           ^~~~~~~~~~~
+scripts/extract-cert.c:133:25: warning: ‘ENGINE_ctrl_cmd_string’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  133 |                         ERR(!ENGINE_ctrl_cmd_string(e, "PIN", key_pass, 0), "Set PKCS#11 PIN");
+      |                         ^~~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:479:5: note: declared here
+  479 | int ENGINE_ctrl_cmd_string(ENGINE *e, const char *cmd_name, const char *arg,
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c:134:17: warning: ‘ENGINE_ctrl_cmd’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  134 |                 ENGINE_ctrl_cmd(e, "LOAD_CERT_CTRL", 0, &parms, NULL, 1);
+      |                 ^~~~~~~~~~~~~~~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:450:27: note: declared here
+  450 | OSSL_DEPRECATEDIN_3_0 int ENGINE_ctrl_cmd(ENGINE *e, const char *cmd_name,
+      |                           ^~~~~~~~~~~~~~~
+  HOSTLD  scripts/dtc/dtc
