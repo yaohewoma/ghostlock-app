@@ -8,7 +8,6 @@
                  U __list_add_valid
                  U __list_del_entry_valid
                  U __mutex_init
-                 U __pte_to_phys
                  U __put_task_struct
                  U __rcu_read_unlock
                  U __stack_chk_fail
@@ -29,7 +28,6 @@
                  U find_next_bit
                  U finish_wait
                  U fput
-                 U fsnotify_add_inode_mark
                  U init_wait_entry
                  U kfree
                  U kmalloc_caches
@@ -54,7 +52,6 @@
                  U prepare_to_wait_event
                  U printk
                  U schedule
-                 U selinux_inode
                  U set_bit
                  U snprintf
                  U strchr

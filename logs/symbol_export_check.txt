@@ -9,7 +9,6 @@ EXPORTED __kmalloc
 EXPORTED __list_add_valid
 EXPORTED __list_del_entry_valid
 EXPORTED __mutex_init
-MISSING  __pte_to_phys
 EXPORTED __put_task_struct
 EXPORTED __rcu_read_unlock
 EXPORTED __stack_chk_fail
@@ -30,7 +29,6 @@ EXPORTED filp_open
 EXPORTED find_next_bit
 EXPORTED finish_wait
 EXPORTED fput
-MISSING  fsnotify_add_inode_mark
 EXPORTED init_wait_entry
 EXPORTED kfree
 EXPORTED kmalloc_caches
@@ -55,7 +53,6 @@ MISSING  param_ops_ulong
 EXPORTED prepare_to_wait_event
 EXPORTED printk
 EXPORTED schedule
-MISSING  selinux_inode
 EXPORTED set_bit
 EXPORTED snprintf
 EXPORTED strchr

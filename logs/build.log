@@ -133,7 +133,7 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
 -- KernelSU: Git repo detected at /home/runner/work/ghostlock-app/ghostlock-app
--- KernelSU version: 30015
+-- KernelSU version: 30017
 -- KSU_NEW_DCACHE_FLUSH: 0
 -- KernelSU Manager package name: me.weishu.kernelsu
 -- KernelSU Manager signature size: 0x033b
@@ -181,7 +181,7 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   LD [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.o
   Building modules, stage 2.
 -- KernelSU: Git repo detected at /home/runner/work/ghostlock-app/ghostlock-app
--- KernelSU version: 30015
+-- KernelSU version: 30017
 -- KSU_NEW_DCACHE_FLUSH: 0
 -- KernelSU Manager package name: me.weishu.kernelsu
 -- KernelSU Manager signature size: 0x033b
@@ -192,7 +192,6 @@ WARNING: "up_read" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/
 WARNING: "strchrnul" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
 WARNING: "crypto_alloc_shash" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
 WARNING: "find_next_bit" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
-WARNING: "__pte_to_phys" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
 WARNING: "param_ops_bool" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
 WARNING: "strncpy_from_user" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
 WARNING: "kstrdup" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
@@ -203,8 +202,6 @@ WARNING: "up_write" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module
 WARNING: "down_write" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
 WARNING: "fput" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
 WARNING: "strrchr" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
-WARNING: "fsnotify_add_inode_mark" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
-WARNING: "selinux_inode" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
 WARNING: "crypto_destroy_tfm" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
 WARNING: "__put_task_struct" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
 WARNING: "param_ops_ulong" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!

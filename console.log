@@ -1,6 +1,6 @@
 == [1/6] fetch 4.14 kernel tree
 Cloning into '/home/runner/work/ghostlock-app/ghostlock-app/work/kernel'...
-Updating files:  24% (22063/89653)Updating files:  25% (22414/89653)Updating files:  26% (23310/89653)Updating files:  27% (24207/89653)Updating files:  28% (25103/89653)Updating files:  29% (26000/89653)Updating files:  30% (26896/89653)Updating files:  31% (27793/89653)Updating files:  32% (28689/89653)Updating files:  33% (29586/89653)Updating files:  34% (30483/89653)Updating files:  35% (31379/89653)Updating files:  36% (32276/89653)Updating files:  36% (33125/89653)Updating files:  37% (33172/89653)Updating files:  38% (34069/89653)Updating files:  39% (34965/89653)Updating files:  40% (35862/89653)Updating files:  41% (36758/89653)Updating files:  42% (37655/89653)Updating files:  43% (38551/89653)Updating files:  44% (39448/89653)Updating files:  45% (40344/89653)Updating files:  46% (41241/89653)Updating files:  47% (42137/89653)Updating files:  48% (43034/89653)Updating files:  49% (43930/89653)Updating files:  50% (44827/89653)Updating files:  51% (45724/89653)Updating files:  52% (46620/89653)Updating files:  53% (47517/89653)Updating files:  53% (47897/89653)Updating files:  54% (48413/89653)Updating files:  55% (49310/89653)Updating files:  56% (50206/89653)Updating files:  57% (51103/89653)Updating files:  58% (51999/89653)Updating files:  59% (52896/89653)Updating files:  60% (53792/89653)Updating files:  61% (54689/89653)Updating files:  62% (55585/89653)Updating files:  63% (56482/89653)Updating files:  64% (57378/89653)Updating files:  65% (58275/89653)Updating files:  66% (59171/89653)Updating files:  67% (60068/89653)Updating files:  67% (60931/89653)Updating files:  68% (60965/89653)Updating files:  69% (61861/89653)Updating files:  70% (62758/89653)Updating files:  71% (63654/89653)Updating files:  72% (64551/89653)Updating files:  73% (65447/89653)Updating files:  74% (66344/89653)Updating files:  75% (67240/89653)Updating files:  76% (68137/89653)Updating files:  77% (69033/89653)Updating files:  78% (69930/89653)Updating files:  79% (70826/89653)Updating files:  79% (71604/89653)Updating files:  80% (71723/89653)Updating files:  81% (72619/89653)Updating files:  82% (73516/89653)Updating files:  83% (74412/89653)Updating files:  84% (75309/89653)Updating files:  85% (76206/89653)Updating files:  86% (77102/89653)Updating files:  87% (77999/89653)Updating files:  88% (78895/89653)Updating files:  89% (79792/89653)Updating files:  90% (80688/89653)Updating files:  91% (81585/89653)Updating files:  92% (82481/89653)Updating files:  93% (83378/89653)Updating files:  94% (84274/89653)Updating files:  95% (85171/89653)Updating files:  96% (86067/89653)Updating files:  97% (86964/89653)Updating files:  97% (87712/89653)Updating files:  98% (87860/89653)Updating files:  99% (88757/89653)Updating files: 100% (89653/89653)Updating files: 100% (89653/89653), done.
+Updating files:  22% (19941/89653)Updating files:  23% (20621/89653)Updating files:  24% (21517/89653)Updating files:  25% (22414/89653)Updating files:  26% (23310/89653)Updating files:  27% (24207/89653)Updating files:  28% (25103/89653)Updating files:  29% (26000/89653)Updating files:  30% (26896/89653)Updating files:  31% (27793/89653)Updating files:  32% (28689/89653)Updating files:  33% (29586/89653)Updating files:  34% (30483/89653)Updating files:  35% (31379/89653)Updating files:  36% (32276/89653)Updating files:  36% (32441/89653)Updating files:  37% (33172/89653)Updating files:  38% (34069/89653)Updating files:  39% (34965/89653)Updating files:  40% (35862/89653)Updating files:  41% (36758/89653)Updating files:  42% (37655/89653)Updating files:  43% (38551/89653)Updating files:  44% (39448/89653)Updating files:  45% (40344/89653)Updating files:  46% (41241/89653)Updating files:  47% (42137/89653)Updating files:  48% (43034/89653)Updating files:  49% (43930/89653)Updating files:  50% (44827/89653)Updating files:  51% (45724/89653)Updating files:  51% (45802/89653)Updating files:  52% (46620/89653)Updating files:  53% (47517/89653)Updating files:  54% (48413/89653)Updating files:  55% (49310/89653)Updating files:  56% (50206/89653)Updating files:  57% (51103/89653)Updating files:  58% (51999/89653)Updating files:  59% (52896/89653)Updating files:  60% (53792/89653)Updating files:  61% (54689/89653)Updating files:  62% (55585/89653)Updating files:  63% (56482/89653)Updating files:  64% (57378/89653)Updating files:  65% (58275/89653)Updating files:  65% (58790/89653)Updating files:  66% (59171/89653)Updating files:  67% (60068/89653)Updating files:  68% (60965/89653)Updating files:  69% (61861/89653)Updating files:  70% (62758/89653)Updating files:  71% (63654/89653)Updating files:  72% (64551/89653)Updating files:  73% (65447/89653)Updating files:  74% (66344/89653)Updating files:  75% (67240/89653)Updating files:  76% (68137/89653)Updating files:  77% (69033/89653)Updating files:  78% (69930/89653)Updating files:  78% (70403/89653)Updating files:  79% (70826/89653)Updating files:  80% (71723/89653)Updating files:  81% (72619/89653)Updating files:  82% (73516/89653)Updating files:  83% (74412/89653)Updating files:  84% (75309/89653)Updating files:  85% (76206/89653)Updating files:  86% (77102/89653)Updating files:  87% (77999/89653)Updating files:  88% (78895/89653)Updating files:  89% (79792/89653)Updating files:  90% (80688/89653)Updating files:  91% (81585/89653)Updating files:  92% (82481/89653)Updating files:  93% (83378/89653)Updating files:  94% (84274/89653)Updating files:  95% (85171/89653)Updating files:  95% (85305/89653)Updating files:  96% (86067/89653)Updating files:  97% (86964/89653)Updating files:  98% (87860/89653)Updating files:  99% (88757/89653)Updating files: 100% (89653/89653)Updating files: 100% (89653/89653), done.
 # SPDX-License-Identifier: GPL-2.0
 VERSION = 4
 PATCHLEVEL = 14
@@ -26,7 +26,7 @@ In file included from scripts/sign-file.c:30:
 real symvers: 635 symbols
 == [6/6] build kernel_module
 == diagnostics
-undefined symbols: 78
+undefined symbols: 75
 == undefined symbol export check
 # undefined symbols vs kernel EXPORT_SYMBOL
 EXPORTED __arch_copy_from_user
@@ -39,7 +39,6 @@ EXPORTED __kmalloc
 EXPORTED __list_add_valid
 EXPORTED __list_del_entry_valid
 EXPORTED __mutex_init
-MISSING  __pte_to_phys
 EXPORTED __put_task_struct
 EXPORTED __rcu_read_unlock
 EXPORTED __stack_chk_fail
@@ -60,7 +59,6 @@ EXPORTED filp_open
 EXPORTED find_next_bit
 EXPORTED finish_wait
 EXPORTED fput
-MISSING  fsnotify_add_inode_mark
 EXPORTED init_wait_entry
 EXPORTED kfree
 EXPORTED kmalloc_caches
@@ -85,7 +83,6 @@ MISSING  param_ops_ulong
 EXPORTED prepare_to_wait_event
 EXPORTED printk
 EXPORTED schedule
-MISSING  selinux_inode
 EXPORTED set_bit
 EXPORTED snprintf
 EXPORTED strchr
@@ -107,6 +104,6 @@ EXPORTED vfs_read
 EXPORTED vfs_write
 EXPORTED warn_slowpath_fmt
 EXPORTED warn_slowpath_null
--rw-r--r-- 1 runner runner 245640 Nov 27 01:43 /home/runner/work/ghostlock-app/ghostlock-app/out/ksu_raw.ko
-b6d64a8caf264bd7fc6fab1f6b06fc1da2eee98730ebdd9f48402ee22271f9a0  /home/runner/work/ghostlock-app/ghostlock-app/out/ksu_raw.ko
+-rw-r--r-- 1 runner runner 245112 Nov 27 01:46 /home/runner/work/ghostlock-app/ghostlock-app/out/ksu_raw.ko
+ce6596c1296dd309614cc5ad9bbd4bfd7c6493f1c05ec1ef3fe3fc847d7f24af  /home/runner/work/ghostlock-app/ghostlock-app/out/ksu_raw.ko
 BUILD_OK

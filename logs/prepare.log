@@ -585,11 +585,11 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   CHK     include/config/kernel.release
+  UPD     include/config/kernel.release
   CHK     include/generated/uapi/linux/version.h
   WRAP    arch/arm64/include/generated/uapi/asm/errno.h
-  UPD     include/generated/uapi/linux/version.h
-  UPD     include/config/kernel.release
   WRAP    arch/arm64/include/generated/uapi/asm/ioctl.h
+  UPD     include/generated/uapi/linux/version.h
   WRAP    arch/arm64/include/generated/uapi/asm/ioctls.h
   WRAP    arch/arm64/include/generated/uapi/asm/ipcbuf.h
   WRAP    arch/arm64/include/generated/uapi/asm/kvm_para.h
@@ -609,19 +609,19 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   WRAP    arch/arm64/include/generated/asm/bugs.h
   WRAP    arch/arm64/include/generated/asm/clkdev.h
   WRAP    arch/arm64/include/generated/asm/delay.h
+  CHK     include/generated/utsrelease.h
   WRAP    arch/arm64/include/generated/asm/div64.h
   WRAP    arch/arm64/include/generated/asm/dma.h
-  CHK     include/generated/utsrelease.h
   WRAP    arch/arm64/include/generated/asm/dma-contiguous.h
   WRAP    arch/arm64/include/generated/asm/early_ioremap.h
   WRAP    arch/arm64/include/generated/asm/emergency-restart.h
-  UPD     include/generated/utsrelease.h
   WRAP    arch/arm64/include/generated/asm/hw_irq.h
   WRAP    arch/arm64/include/generated/asm/irq_regs.h
   WRAP    arch/arm64/include/generated/asm/kdebug.h
   WRAP    arch/arm64/include/generated/asm/kmap_types.h
   WRAP    arch/arm64/include/generated/asm/local.h
   WRAP    arch/arm64/include/generated/asm/local64.h
+  UPD     include/generated/utsrelease.h
   WRAP    arch/arm64/include/generated/asm/mcs_spinlock.h
   WRAP    arch/arm64/include/generated/asm/mm-arch-hooks.h
   WRAP    arch/arm64/include/generated/asm/msi.h
@@ -640,59 +640,59 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   HOSTCC  scripts/basic/bin2c
   CHK     include/generated/timeconst.h
   CC      kernel/bounds.s
-  HOSTCC  scripts/dtc/dtc.o
-  HOSTCC  scripts/genksyms/genksyms.o
   UPD     include/generated/timeconst.h
-  SHIPPED scripts/genksyms/parse.tab.c
-  SHIPPED scripts/genksyms/lex.lex.c
-  SHIPPED scripts/genksyms/parse.tab.h
-  HOSTCC  scripts/genksyms/parse.tab.o
+  HOSTCC  scripts/dtc/dtc.o
+  HOSTCC  scripts/dtc/flattree.o
+  HOSTCC  scripts/genksyms/genksyms.o
   CHK     include/generated/bounds.h
   UPD     include/generated/bounds.h
   CC      arch/arm64/kernel/asm-offsets.s
-  HOSTCC  scripts/dtc/flattree.o
-  HOSTCC  scripts/dtc/fstree.o
-  HOSTCC  scripts/genksyms/lex.lex.o
+  SHIPPED scripts/genksyms/parse.tab.c
   CC      scripts/mod/empty.o
   HOSTCC  scripts/mod/mk_elfconfig
+  SHIPPED scripts/genksyms/lex.lex.c
+  CC      scripts/mod/devicetable-offsets.s
+  SHIPPED scripts/genksyms/parse.tab.h
+  HOSTCC  scripts/genksyms/parse.tab.o
+  HOSTCC  scripts/dtc/fstree.o
+  MKELF   scripts/mod/elfconfig.h
+  CHK     scripts/mod/devicetable-offsets.h
+  UPD     scripts/mod/devicetable-offsets.h
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTCC  scripts/dtc/data.o
+  HOSTCC  scripts/genksyms/lex.lex.o
   CHK     include/generated/asm-offsets.h
   UPD     include/generated/asm-offsets.h
   CALL    scripts/checksyscalls.sh
-  CC      scripts/mod/devicetable-offsets.s
-  HOSTCC  scripts/dtc/data.o
-  MKELF   scripts/mod/elfconfig.h
-  CHK     scripts/mod/devicetable-offsets.h
-  HOSTCC  scripts/selinux/genheaders/genheaders
-  UPD     scripts/mod/devicetable-offsets.h
-  HOSTCC  scripts/mod/sumversion.o
-  HOSTCC  scripts/dtc/livetree.o
-  HOSTCC  scripts/selinux/mdp/mdp
   HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/selinux/genheaders/genheaders
+  HOSTCC  scripts/selinux/mdp/mdp
+  HOSTCC  scripts/mod/file2alias.o
   HOSTCC  scripts/dtc/treesource.o
   HOSTLD  scripts/genksyms/genksyms
-  HOSTCC  scripts/dtc/srcpos.o
-  HOSTCC  scripts/kallsyms
-  HOSTCC  scripts/mod/file2alias.o
-  HOSTCC  scripts/dtc/checks.o
   LDS     arch/arm64/kernel/vdso/vdso.lds
   VDSOA   arch/arm64/kernel/vdso/gettimeofday.o
+  HOSTCC  scripts/dtc/srcpos.o
   VDSOA   arch/arm64/kernel/vdso/note.o
   VDSOA   arch/arm64/kernel/vdso/sigreturn.o
   LD      arch/arm64/kernel/vdso/vdso.so.dbg
   VDSOSYM include/generated/vdso-offsets.h
+  HOSTCC  scripts/dtc/checks.o
+  HOSTCC  scripts/kallsyms
   HOSTCC  scripts/dtc/util.o
-  HOSTCC  scripts/pnmtologo
   HOSTLD  scripts/mod/modpost
-  HOSTCC  scripts/sortextable
   SHIPPED scripts/dtc/dtc-lexer.lex.c
+  HOSTCC  scripts/pnmtologo
+  HOSTCC  scripts/sortextable
   SHIPPED scripts/dtc/dtc-parser.tab.h
+  HOSTCC  scripts/asn1_compiler
   SHIPPED scripts/dtc/dtc-parser.tab.c
   HOSTCC  scripts/dtc/dtc-lexer.lex.o
   HOSTCC  scripts/dtc/dtc-parser.tab.o
-  HOSTCC  scripts/asn1_compiler
   HOSTCC  scripts/sign-file
-  HOSTLD  scripts/dtc/dtc
   HOSTCC  scripts/extract-cert
+  HOSTLD  scripts/dtc/dtc
 scripts/extract-cert.c: In function ‘display_openssl_errors’:
 scripts/extract-cert.c:46:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
    46 |         while ((e = ERR_get_error_line(&file, &line))) {
