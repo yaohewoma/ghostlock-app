@@ -1,0 +1,55 @@
+name: build-k7x-ksu-raw
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, k7x-ksu-build]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build ksu_raw.ko for OPPO K7x 4.14.186+
+        run: bash build.sh 2>&1 | tee console.log
+
+      - name: Upload artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: k7x-ksu-raw
+          path: |
+            out/ksu_raw.ko
+            out/undefined_symbols.txt
+            out/build.log
+            out/prepare.log
+            out/olddefconfig.log
+            out/modpost_warnings.txt
+            out/built_config
+            out/module_Module.symvers
+          retention-days: 30
+
+      - name: Commit logs back (always)
+        if: always()
+        run: |
+          git config user.name "build-bot"
+          git config user.email "bot@users.noreply.github.com"
+          mkdir -p logs
+          for f in out/build.log out/prepare.log out/olddefconfig.log out/modpost_warnings.txt out/undefined_symbols.txt out/module_Module.symvers out/ksu_raw.ko; do
+            [ -f "$f" ] && cp "$f" logs/ || true
+          done
+          [ -f console.log ] && cp console.log logs/console.log
+          [ -f logs/console.log ] || echo "failed before console.log" > logs/console.log
+          git add -f logs/ 2>/dev/null || true
+          git add console.log 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "no log changes"
+          else
+            git commit -m "ci: build logs [skip ci]"
+            git push origin HEAD:k7x-ksu-build
+          fi
