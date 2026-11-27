@@ -4,6 +4,7 @@
 #include <linux/lsm_hooks.h>
 #include <linux/printk.h>
 #include <linux/types.h>
+#include <linux/version.h>
 #include "s15_addr.h"
 
 extern unsigned long s15_glue_ptr___get_task_comm;
@@ -142,8 +143,11 @@ bool static_key_initialized = true;
 
 /* selinux_blob_sizes is stripped from device kallsyms; SELinux owns the
  * first cred/inode blob slots on this build (offset 0). A local zeroed
- * definition satisfies objsec.h inlines in file_wrapper.c. */
+ * definition satisfies objsec.h inlines in file_wrapper.c.
+ * 4.14 has no struct lsm_blob_sizes at all, so only define it where it exists. */
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0)
 struct lsm_blob_sizes selinux_blob_sizes;
+#endif
 
 /* vivo inlined __rcu_read_lock: nesting++ + barrier. task_struct offset
  * 0x4d0 confirmed by disassembly of inlined callers in the device image. */
