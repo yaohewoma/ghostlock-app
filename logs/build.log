@@ -133,7 +133,7 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
 -- KernelSU: Git repo detected at /home/runner/work/ghostlock-app/ghostlock-app
--- KernelSU version: 30001
+-- KernelSU version: 30003
 -- KSU_NEW_DCACHE_FLUSH: 0
 -- KernelSU Manager package name: me.weishu.kernelsu
 -- KernelSU Manager signature size: 0x033b
@@ -145,24 +145,27 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/s15_glue.o
   AS [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/s15_glue_asm.o
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/feature/module_blacklist.o
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/s15_glue.c:146:23: error: storage size of ‘selinux_blob_sizes’ isn’t known
-  146 | struct lsm_blob_sizes selinux_blob_sizes;
-      |                       ^~~~~~~~~~~~~~~~~~
-cc1: note: unrecognized command-line option ‘-Wno-gcc-compat’ may have been intended to silence earlier diagnostics
-make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/s15_glue.o] Error 1
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/feature/sulog.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/feature/sucompat.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/setuid_hook.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/syscall_event_bridge.o
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/feature/sucompat.c:8:10: fatal error: linux/pgtable.h: No such file or directory
+    8 | #include <linux/pgtable.h>
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/feature/sucompat.o] Error 1
 make[1]: *** Waiting for unfinished jobs....
-In file included from /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/core/init.c:25:
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/syscall_hook.h:11:8: error: unknown type name ‘syscall_fn_t’
-   11 | extern syscall_fn_t *ksu_syscall_table;
-      |        ^~~~~~~~~~~~
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/syscall_hook.h:42:37: error: unknown type name ‘syscall_fn_t’; did you mean ‘smp_call_func_t’?
-   42 | void ksu_syscall_table_hook(int nr, syscall_fn_t fn, syscall_fn_t *old);
-      |                                     ^~~~~~~~~~~~
-      |                                     smp_call_func_t
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/syscall_hook.h:42:54: error: unknown type name ‘syscall_fn_t’; did you mean ‘smp_call_func_t’?
-   42 | void ksu_syscall_table_hook(int nr, syscall_fn_t fn, syscall_fn_t *old);
-      |                                                      ^~~~~~~~~~~~
-      |                                                      smp_call_func_t
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.c: In function ‘ksu_lsm_hook’:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.c:345:37: error: ‘struct list_head’ has no member named ‘pprev’; did you mean ‘prev’?
+  345 |                     hook->list.list.pprev = &head->first;
+      |                                     ^~~~~
+      |                                     prev
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.c: In function ‘ksu_lsm_unhook’:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.c:414:41: error: ‘struct list_head’ has no member named ‘first’
+  414 |         slot = (void **)&hook->list.head->first;
+      |                                         ^~
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.c: At top level:
 cc1: note: unrecognized command-line option ‘-Wno-gcc-compat’ may have been intended to silence earlier diagnostics
-make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/core/init.o] Error 1
+make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.o] Error 1
 make: *** [Makefile:1748: _module_/home/runner/work/ghostlock-app/ghostlock-app/kernel_module] Error 2
