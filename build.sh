@@ -95,6 +95,21 @@ grep -E "no symbol version|WARNING" "$OUT/build.log" | head -40 > "$OUT/modpost_
 cp "$TREE/.config" "$OUT/built_config"
 cp "$MOD/Module.symvers" "$OUT/module_Module.symvers" 2>/dev/null || true
 
+echo "== undefined symbol export check"
+{
+  echo "# undefined symbols vs kernel EXPORT_SYMBOL"
+  awk '$1=="U"{print $2}' "$OUT/undefined_symbols.txt" | sort -u | while read -r name; do
+    [ -n "$name" ] || continue
+    if grep -R -q -E "EXPORT_SYMBOL(_GPL|_GPL_FUTURE)?[[:space:]]*\\(${name}\\)" \
+        "$TREE" --include='*.c' --include='*.h' 2>/dev/null; then
+      echo "EXPORTED $name"
+    else
+      echo "MISSING  $name"
+    fi
+  done
+} > "$OUT/symbol_export_check.txt" 2>&1
+cat "$OUT/symbol_export_check.txt"
+
 ls -la "$OUT/ksu_raw.ko"
 sha256sum "$OUT/ksu_raw.ko"
 echo "BUILD_OK"

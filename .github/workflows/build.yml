@@ -28,6 +28,7 @@ jobs:
           path: |
             out/ksu_raw.ko
             out/undefined_symbols.txt
+            out/symbol_export_check.txt
             out/build.log
             out/prepare.log
             out/olddefconfig.log
@@ -42,7 +43,7 @@ jobs:
           git config user.name "build-bot"
           git config user.email "bot@users.noreply.github.com"
           mkdir -p logs
-          for f in out/build.log out/prepare.log out/olddefconfig.log out/modpost_warnings.txt out/undefined_symbols.txt out/module_Module.symvers out/ksu_raw.ko; do
+          for f in out/build.log out/prepare.log out/olddefconfig.log out/modpost_warnings.txt out/undefined_symbols.txt out/symbol_export_check.txt out/module_Module.symvers out/ksu_raw.ko; do
             [ -f "$f" ] && cp "$f" logs/ || true
           done
           [ -f console.log ] && cp console.log logs/console.log
