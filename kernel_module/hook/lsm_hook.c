@@ -276,7 +276,7 @@ int ksu_lsm_hook(struct ksu_lsm_hook *hook)
     hook->original = selected_origin;
     pr_info("lsm_hook: patched %s hook slot %px from %px to %px\n", hook->head_name ?: "unknown", selected_slot,
             selected_origin, hook->replacement);
-#else
+#elif LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0)
     heads_addr = find_kernel_symbol_exact("security_hook_heads");
     if (!heads_addr) {
         pr_err("lsm_hook: failed to resolve security_hook_heads\n");
@@ -383,6 +383,11 @@ int ksu_lsm_hook(struct ksu_lsm_hook *hook)
     hook->original = selected_origin;
     pr_info("lsm_hook: patched %s hook slot %px from %px to %px\n", hook->head_name ?: "unknown", selected_slot,
             selected_origin, hook->replacement);
+#else
+    /* 4.14 uses list_head security_hook_heads; runtime LSM patching is
+     * disabled here (the feature gating already skips it on 4.14). */
+    pr_warn("lsm_hook: runtime LSM patch unsupported on this kernel\n");
+    ret = -ENOSYS;
 #endif
     goto out_unlock;
 out_untrack:
@@ -398,6 +403,11 @@ void ksu_lsm_unhook(struct ksu_lsm_hook *hook)
     void **slot;
     mutex_lock(&ksu_lsm_hook_lock);
 
+#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 19, 0)
+    mutex_unlock(&ksu_lsm_hook_lock);
+    return;
+#endif
+
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 12, 0)
     if (!hook->entry || !hook->scall) {
 #else
@@ -409,7 +419,7 @@ void ksu_lsm_unhook(struct ksu_lsm_hook *hook)
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 12, 0)
     slot = (void **)((char *)hook->entry + hook->hook_offset);
-#else
+#elif LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0)
     if (hook->entry == &hook->list) {
         slot = (void **)&hook->list.head->first;
         pr_info("unhook patch head->first\n");
@@ -417,6 +427,8 @@ void ksu_lsm_unhook(struct ksu_lsm_hook *hook)
         slot = (void **)((char *)hook->entry + hook->hook_offset);
         pr_info("unhook patch slot\n");
     }
+#else
+    slot = NULL;
 #endif
     if (ksu_lsm_hook_patch_slot(slot, hook->original)) {
         pr_err("lsm_hook: failed to restore %s\n", hook->head_name ?: "unknown");
