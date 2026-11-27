@@ -107,10 +107,16 @@ static int add_mark_on_inode(struct inode *inode, u32 mask, struct fsnotify_mark
     fsnotify_init_mark(m, g);
     m->mask = mask;
 
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0)
     if (fsnotify_add_inode_mark(m, inode, 0)) {
         fsnotify_put_mark(m);
         return -EINVAL;
     }
+#else
+    /* 4.14: fsnotify_add_inode_mark is not exported; skip package observer. */
+    fsnotify_put_mark(m);
+    return -ENOSYS;
+#endif
     *out = m;
     return 0;
 }

@@ -16,6 +16,12 @@
 
 #include "../../infra/s15_addr.h"
 #include <linux/sched.h>
+#include <linux/version.h>
+
+/* 4.14 arm64 does not expose __pte_to_phys to modules; derive it from pte_pfn. */
+#if LINUX_VERSION_CODE < KERNEL_VERSION(4, 19, 0)
+#define __pte_to_phys(pte) ((phys_addr_t)pte_pfn(pte) << PAGE_SHIFT)
+#endif
 
 /*
  * S15: init_mm is stripped from kallsyms and not exported.
