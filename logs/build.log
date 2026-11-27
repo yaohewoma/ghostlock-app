@@ -1,0 +1,168 @@
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HANS_FREEZE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_AOD
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DC
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ENABLE_MODEM_DB
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ENGINEERTOOLS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HEALTHINFO
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TASK_CPUSTATS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FACERECOGNITION
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FASTBOOT_UNLOCK_VERIFY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FG_IO_OPT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SCHED_ASSIST
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SDCARD_INFO
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FINGERPRINT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SPECIALOPT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_UFSPLUS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MIPICLKCHANGE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MULTI_FREEAREA
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MULTI_KSWAPD
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_NFC_CONSOFT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ONSCREENFINGERPRINT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_OSC
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PHOENIX
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_AGINGTEST
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PROCESS_RECLAIM
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_RESET_ROLLBACK_INDEX
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SELINUX_CONTROL_LOG
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_ALGORITHM
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_SMEM
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_WISELIGHT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_IOMONITOR
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SPEAKER_MUTE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MM_FEEDBACK
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TP_BSPFWUPDATE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CHG_BASIC
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_VIRTUAL_RESERVE_MEMORY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MEMLEAK_DETECT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_MTUDETECT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_RUSUPGRADE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_SLA
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DATA_EVAL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_SMART_BW
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_IPV6_OPTIMIZE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ZRAM_OPT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_EXFAT_SUPPORT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SDCARDFS_SUPPORT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_COMPATIBILITY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MIDAS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_STABILITY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_DEBUG
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_ARCH_INJECT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_ARCH_EXTENDS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_LOWMEM_DBG
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PERFORMANCE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MTK_ION_SEPARATE_LOCK
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ALARMINFO_STANDBY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_POWERINFO_STANDBY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_POWERINFO_STANDBY_DEBUG
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_POWERINFO_RPMH
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_POWERINFO_FTM
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SCHEDUTIL_USE_TL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CORE_CTL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HANS_FREEZE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_AOD
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DC
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ENABLE_MODEM_DB
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ENGINEERTOOLS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_HEALTHINFO
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TASK_CPUSTATS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FACERECOGNITION
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FASTBOOT_UNLOCK_VERIFY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FG_IO_OPT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SCHED_ASSIST
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SDCARD_INFO
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_FINGERPRINT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SPECIALOPT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_UFSPLUS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MIPICLKCHANGE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MULTI_FREEAREA
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MULTI_KSWAPD
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_NFC_CONSOFT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ONSCREENFINGERPRINT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_OSC
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PHOENIX
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_AGINGTEST
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PROCESS_RECLAIM
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_RESET_ROLLBACK_INDEX
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SELINUX_CONTROL_LOG
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_ALGORITHM
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_SMEM
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SENSOR_WISELIGHT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_IOMONITOR
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SPEAKER_MUTE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MM_FEEDBACK
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_TP_BSPFWUPDATE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CHG_BASIC
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_VIRTUAL_RESERVE_MEMORY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MEMLEAK_DETECT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_MTUDETECT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_RUSUPGRADE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_SLA
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_DATA_EVAL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_SMART_BW
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_IPV6_OPTIMIZE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ZRAM_OPT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_EXFAT_SUPPORT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SDCARDFS_SUPPORT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_COMPATIBILITY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MIDAS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_STABILITY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_BUG_DEBUG
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_ARCH_INJECT
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_ARCH_EXTENDS
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_LOWMEM_DBG
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_PERFORMANCE
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_MTK_ION_SEPARATE_LOCK
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_ALARMINFO_STANDBY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_POWERINFO_STANDBY
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_POWERINFO_STANDBY_DEBUG
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_POWERINFO_RPMH
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_POWERINFO_FTM
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_SCHEDUTIL_USE_TL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CORE_CTL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
+OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
+-- KernelSU: Git repo detected at /home/runner/work/ghostlock-app/ghostlock-app
+-- KernelSU version: 30001
+-- KSU_NEW_DCACHE_FLUSH: 0
+-- KernelSU Manager package name: me.weishu.kernelsu
+-- KernelSU Manager signature size: 0x033b
+-- KernelSU Manager signature hash: c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6
+-- KernelSU is PR Build: 0
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/core/init.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/s15_addr.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/feature/kernel_umount.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/s15_glue.o
+  AS [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/s15_glue_asm.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/feature/module_blacklist.o
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/s15_glue.c:146:23: error: storage size of ‘selinux_blob_sizes’ isn’t known
+  146 | struct lsm_blob_sizes selinux_blob_sizes;
+      |                       ^~~~~~~~~~~~~~~~~~
+cc1: note: unrecognized command-line option ‘-Wno-gcc-compat’ may have been intended to silence earlier diagnostics
+make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/s15_glue.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+In file included from /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/core/init.c:25:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/syscall_hook.h:11:8: error: unknown type name ‘syscall_fn_t’
+   11 | extern syscall_fn_t *ksu_syscall_table;
+      |        ^~~~~~~~~~~~
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/syscall_hook.h:42:37: error: unknown type name ‘syscall_fn_t’; did you mean ‘smp_call_func_t’?
+   42 | void ksu_syscall_table_hook(int nr, syscall_fn_t fn, syscall_fn_t *old);
+      |                                     ^~~~~~~~~~~~
+      |                                     smp_call_func_t
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/syscall_hook.h:42:54: error: unknown type name ‘syscall_fn_t’; did you mean ‘smp_call_func_t’?
+   42 | void ksu_syscall_table_hook(int nr, syscall_fn_t fn, syscall_fn_t *old);
+      |                                                      ^~~~~~~~~~~~
+      |                                                      smp_call_func_t
+cc1: note: unrecognized command-line option ‘-Wno-gcc-compat’ may have been intended to silence earlier diagnostics
+make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/core/init.o] Error 1
+make: *** [Makefile:1748: _module_/home/runner/work/ghostlock-app/ghostlock-app/kernel_module] Error 2
