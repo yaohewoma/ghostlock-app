@@ -133,7 +133,7 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
 -- KernelSU: Git repo detected at /home/runner/work/ghostlock-app/ghostlock-app
--- KernelSU version: 30003
+-- KernelSU version: 30005
 -- KSU_NEW_DCACHE_FLUSH: 0
 -- KernelSU Manager package name: me.weishu.kernelsu
 -- KernelSU Manager signature size: 0x033b
@@ -150,22 +150,107 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.o
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/setuid_hook.o
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/syscall_event_bridge.o
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/feature/sucompat.c:8:10: fatal error: linux/pgtable.h: No such file or directory
-    8 | #include <linux/pgtable.h>
-      |          ^~~~~~~~~~~~~~~~~
-compilation terminated.
-make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/feature/sucompat.o] Error 1
-make[1]: *** Waiting for unfinished jobs....
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.c: In function ‘ksu_lsm_hook’:
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.c:345:37: error: ‘struct list_head’ has no member named ‘pprev’; did you mean ‘prev’?
-  345 |                     hook->list.list.pprev = &head->first;
-      |                                     ^~~~~
-      |                                     prev
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.c: In function ‘ksu_lsm_unhook’:
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.c:414:41: error: ‘struct list_head’ has no member named ‘first’
-  414 |         slot = (void **)&hook->list.head->first;
-      |                                         ^~
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.c: At top level:
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/syscall_hook_manager.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/tp_marker.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/arm64/patch_memory.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/arm64/syscall_hook.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.o
+In file included from /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:12:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.h:58:1: error: unknown type name ‘__poll_t’; did you mean ‘__SVBool_t’?
+   58 | __poll_t ksu_event_queue_poll(struct ksu_event_queue *queue, struct file *file, poll_table *wait);
+      | ^~~~~~~~
+      | __SVBool_t
+In file included from ./include/linux/poll.h:8,
+                 from /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:5:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c: In function ‘ksu_event_queue_destroy’:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:75:51: error: ‘EPOLLHUP’ undeclared (first use in this function); did you mean ‘POLLHUP’?
+   75 |     wake_up_interruptible_poll(&queue->read_wait, EPOLLHUP | POLLHUP);
+      |                                                   ^~~~~~~~
+./include/linux/wait.h:215:55: note: in definition of macro ‘wake_up_interruptible_poll’
+  215 |         __wake_up(x, TASK_INTERRUPTIBLE, 1, (void *) (m))
+      |                                                       ^
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:75:51: note: each undeclared identifier is reported only once for each function it appears in
+   75 |     wake_up_interruptible_poll(&queue->read_wait, EPOLLHUP | POLLHUP);
+      |                                                   ^~~~~~~~
+./include/linux/wait.h:215:55: note: in definition of macro ‘wake_up_interruptible_poll’
+  215 |         __wake_up(x, TASK_INTERRUPTIBLE, 1, (void *) (m))
+      |                                                       ^
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c: In function ‘ksu_event_queue_push’:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:156:55: error: ‘EPOLLIN’ undeclared (first use in this function); did you mean ‘POLLIN’?
+  156 |         wake_up_interruptible_poll(&queue->read_wait, EPOLLIN | EPOLLRDNORM);
+      |                                                       ^~~~~~~
+./include/linux/wait.h:215:55: note: in definition of macro ‘wake_up_interruptible_poll’
+  215 |         __wake_up(x, TASK_INTERRUPTIBLE, 1, (void *) (m))
+      |                                                       ^
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:156:65: error: ‘EPOLLRDNORM’ undeclared (first use in this function); did you mean ‘POLLRDNORM’?
+  156 |         wake_up_interruptible_poll(&queue->read_wait, EPOLLIN | EPOLLRDNORM);
+      |                                                                 ^~~~~~~~~~~
+./include/linux/wait.h:215:55: note: in definition of macro ‘wake_up_interruptible_poll’
+  215 |         __wake_up(x, TASK_INTERRUPTIBLE, 1, (void *) (m))
+      |                                                       ^
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c: In function ‘ksu_event_queue_drop’:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:177:51: error: ‘EPOLLIN’ undeclared (first use in this function); did you mean ‘POLLIN’?
+  177 |     wake_up_interruptible_poll(&queue->read_wait, EPOLLIN | EPOLLRDNORM);
+      |                                                   ^~~~~~~
+./include/linux/wait.h:215:55: note: in definition of macro ‘wake_up_interruptible_poll’
+  215 |         __wake_up(x, TASK_INTERRUPTIBLE, 1, (void *) (m))
+      |                                                       ^
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/seccomp_cache.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/su_mount_ns.o
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:177:61: error: ‘EPOLLRDNORM’ undeclared (first use in this function); did you mean ‘POLLRDNORM’?
+  177 |     wake_up_interruptible_poll(&queue->read_wait, EPOLLIN | EPOLLRDNORM);
+      |                                                             ^~~~~~~~~~~
+./include/linux/wait.h:215:55: note: in definition of macro ‘wake_up_interruptible_poll’
+  215 |         __wake_up(x, TASK_INTERRUPTIBLE, 1, (void *) (m))
+      |                                                       ^
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c: At top level:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:372:1: error: unknown type name ‘__poll_t’; did you mean ‘__SVBool_t’?
+  372 | __poll_t ksu_event_queue_poll(struct ksu_event_queue *queue, struct file *file, poll_table *wait)
+      | ^~~~~~~~
+      | __SVBool_t
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c: In function ‘ksu_event_queue_poll’:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:374:5: error: unknown type name ‘__poll_t’; did you mean ‘__SVBool_t’?
+  374 |     __poll_t mask = 0;
+      |     ^~~~~~~~
+      |     __SVBool_t
+In file included from ./include/linux/poll.h:8,
+                 from /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:5:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c: In function ‘ksu_event_queue_close’:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:394:51: error: ‘EPOLLHUP’ undeclared (first use in this function); did you mean ‘POLLHUP’?
+  394 |     wake_up_interruptible_poll(&queue->read_wait, EPOLLHUP | POLLHUP);
+      |                                                   ^~~~~~~~
+./include/linux/wait.h:215:55: note: in definition of macro ‘wake_up_interruptible_poll’
+  215 |         __wake_up(x, TASK_INTERRUPTIBLE, 1, (void *) (m))
+      |                                                       ^
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c: At top level:
 cc1: note: unrecognized command-line option ‘-Wno-gcc-compat’ may have been intended to silence earlier diagnostics
-make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/lsm_hook.o] Error 1
+make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.c:128:8: error: unknown type name ‘__poll_t’
+  128 | static __poll_t ksu_wrapper_poll(struct file *fp, struct poll_table_struct *pts)
+      |        ^~~~~~~~
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.c: In function ‘ksu_wrapper_fadvise’:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.c:339:19: error: ‘const struct file_operations’ has no member named ‘fadvise’
+  339 |     if (orig->f_op->fadvise) {
+      |                   ^~
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.c:340:26: error: ‘const struct file_operations’ has no member named ‘fadvise’
+  340 |         return orig->f_op->fadvise(orig, off1, off2, flags);
+      |                          ^~
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.c: In function ‘ksu_create_file_wrapper’:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.c:388:11: error: ‘struct file_operations’ has no member named ‘mmap_supported_flags’
+  388 |     p->ops.mmap_supported_flags = fp->f_op->mmap_supported_flags;
+      |           ^
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.c:388:43: error: ‘const struct file_operations’ has no member named ‘mmap_supported_flags’
+  388 |     p->ops.mmap_supported_flags = fp->f_op->mmap_supported_flags;
+      |                                           ^~
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.c:410:11: error: ‘struct file_operations’ has no member named ‘fadvise’
+  410 |     p->ops.fadvise = fp->f_op->fadvise ? ksu_wrapper_fadvise : NULL;
+      |           ^
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.c:410:30: error: ‘const struct file_operations’ has no member named ‘fadvise’
+  410 |     p->ops.fadvise = fp->f_op->fadvise ? ksu_wrapper_fadvise : NULL;
+      |                              ^~
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.c: At top level:
+cc1: note: unrecognized command-line option ‘-Wno-gcc-compat’ may have been intended to silence earlier diagnostics
+make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.o] Error 1
 make: *** [Makefile:1748: _module_/home/runner/work/ghostlock-app/ghostlock-app/kernel_module] Error 2

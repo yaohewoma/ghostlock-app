@@ -586,11 +586,11 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   CHK     include/config/kernel.release
   CHK     include/generated/uapi/linux/version.h
-  UPD     include/generated/uapi/linux/version.h
-  WRAP    arch/arm64/include/generated/uapi/asm/errno.h
   UPD     include/config/kernel.release
+  WRAP    arch/arm64/include/generated/uapi/asm/errno.h
   WRAP    arch/arm64/include/generated/uapi/asm/ioctl.h
   WRAP    arch/arm64/include/generated/uapi/asm/ioctls.h
+  UPD     include/generated/uapi/linux/version.h
   WRAP    arch/arm64/include/generated/uapi/asm/ipcbuf.h
   WRAP    arch/arm64/include/generated/uapi/asm/kvm_para.h
   WRAP    arch/arm64/include/generated/uapi/asm/mman.h
@@ -615,8 +615,8 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   WRAP    arch/arm64/include/generated/asm/dma-contiguous.h
   WRAP    arch/arm64/include/generated/asm/early_ioremap.h
   WRAP    arch/arm64/include/generated/asm/emergency-restart.h
-  UPD     include/generated/utsrelease.h
   WRAP    arch/arm64/include/generated/asm/hw_irq.h
+  UPD     include/generated/utsrelease.h
   WRAP    arch/arm64/include/generated/asm/irq_regs.h
   WRAP    arch/arm64/include/generated/asm/kdebug.h
   WRAP    arch/arm64/include/generated/asm/kmap_types.h
@@ -640,57 +640,57 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   HOSTCC  scripts/basic/bin2c
   CHK     include/generated/timeconst.h
   CC      kernel/bounds.s
-  UPD     include/generated/timeconst.h
-  HOSTCC  scripts/dtc/dtc.o
   HOSTCC  scripts/genksyms/genksyms.o
+  HOSTCC  scripts/dtc/dtc.o
+  UPD     include/generated/timeconst.h
   SHIPPED scripts/genksyms/parse.tab.c
-  SHIPPED scripts/genksyms/lex.lex.c
-  CC      scripts/mod/empty.o
+  HOSTCC  scripts/dtc/flattree.o
   CHK     include/generated/bounds.h
   UPD     include/generated/bounds.h
   CC      arch/arm64/kernel/asm-offsets.s
+  CC      scripts/mod/empty.o
   HOSTCC  scripts/mod/mk_elfconfig
-  HOSTCC  scripts/dtc/flattree.o
   CC      scripts/mod/devicetable-offsets.s
+  SHIPPED scripts/genksyms/lex.lex.c
+  SHIPPED scripts/genksyms/parse.tab.h
+  HOSTCC  scripts/genksyms/parse.tab.o
   MKELF   scripts/mod/elfconfig.h
   CHK     scripts/mod/devicetable-offsets.h
   UPD     scripts/mod/devicetable-offsets.h
   HOSTCC  scripts/mod/sumversion.o
-  SHIPPED scripts/genksyms/parse.tab.h
-  HOSTCC  scripts/genksyms/parse.tab.o
-  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/dtc/fstree.o
+  HOSTCC  scripts/dtc/data.o
+  HOSTCC  scripts/genksyms/lex.lex.o
   CHK     include/generated/asm-offsets.h
   UPD     include/generated/asm-offsets.h
   CALL    scripts/checksyscalls.sh
-  HOSTCC  scripts/dtc/fstree.o
-  HOSTCC  scripts/genksyms/lex.lex.o
-  HOSTCC  scripts/selinux/genheaders/genheaders
-  HOSTCC  scripts/dtc/data.o
-  HOSTCC  scripts/selinux/mdp/mdp
+  HOSTCC  scripts/mod/modpost.o
   HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/selinux/genheaders/genheaders
+  HOSTCC  scripts/selinux/mdp/mdp
   HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/dtc/treesource.o
   HOSTLD  scripts/genksyms/genksyms
   LDS     arch/arm64/kernel/vdso/vdso.lds
   VDSOA   arch/arm64/kernel/vdso/gettimeofday.o
-  HOSTCC  scripts/dtc/treesource.o
   VDSOA   arch/arm64/kernel/vdso/note.o
+  HOSTCC  scripts/dtc/srcpos.o
   VDSOA   arch/arm64/kernel/vdso/sigreturn.o
-  HOSTCC  scripts/kallsyms
   LD      arch/arm64/kernel/vdso/vdso.so.dbg
   VDSOSYM include/generated/vdso-offsets.h
-  HOSTCC  scripts/dtc/srcpos.o
+  HOSTCC  scripts/kallsyms
+  HOSTCC  scripts/dtc/checks.o
   HOSTLD  scripts/mod/modpost
   HOSTCC  scripts/pnmtologo
-  HOSTCC  scripts/dtc/checks.o
   HOSTCC  scripts/sortextable
-  HOSTCC  scripts/asn1_compiler
   HOSTCC  scripts/dtc/util.o
-  HOSTCC  scripts/sign-file
-  HOSTCC  scripts/extract-cert
   SHIPPED scripts/dtc/dtc-lexer.lex.c
+  HOSTCC  scripts/asn1_compiler
+  HOSTCC  scripts/sign-file
   SHIPPED scripts/dtc/dtc-parser.tab.h
   SHIPPED scripts/dtc/dtc-parser.tab.c
   HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTCC  scripts/extract-cert
   HOSTCC  scripts/dtc/dtc-parser.tab.o
 scripts/extract-cert.c: In function ‘display_openssl_errors’:
 scripts/extract-cert.c:46:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
