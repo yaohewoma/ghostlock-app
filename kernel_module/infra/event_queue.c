@@ -3,6 +3,13 @@
 #include <linux/mutex.h>
 #include <linux/overflow.h>
 #include <linux/poll.h>
+#include <linux/version.h>
+
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0)
+#define KSU_POLL_T __poll_t
+#else
+#define KSU_POLL_T unsigned int
+#endif
 #include <linux/slab.h>
 #include <linux/spinlock.h>
 #include <linux/string.h>
@@ -72,7 +79,7 @@ void ksu_event_queue_destroy(struct ksu_event_queue *queue)
     unsigned long irq_flags;
 
     ksu_event_queue_mark_closed(queue);
-    wake_up_interruptible_poll(&queue->read_wait, EPOLLHUP | POLLHUP);
+    wake_up_interruptible_poll(&queue->read_wait, POLLHUP);
 
     mutex_lock(&queue->read_lock);
     spin_lock_irqsave(&queue->lock, irq_flags);
@@ -90,7 +97,7 @@ void ksu_event_queue_destroy(struct ksu_event_queue *queue)
     spin_unlock_irqrestore(&queue->lock, irq_flags);
     mutex_unlock(&queue->read_lock);
 
-    wake_up_interruptible_poll(&queue->read_wait, EPOLLHUP | POLLHUP);
+    wake_up_interruptible_poll(&queue->read_wait, POLLHUP);
 }
 
 int ksu_event_queue_push(struct ksu_event_queue *queue, __u16 type, __u16 flags, const void *payload, __u32 len,
@@ -153,7 +160,7 @@ out_unlock:
     }
 
     if (wake) {
-        wake_up_interruptible_poll(&queue->read_wait, EPOLLIN | EPOLLRDNORM);
+        wake_up_interruptible_poll(&queue->read_wait, POLLIN | POLLRDNORM);
     }
 
     return ret;
@@ -174,7 +181,7 @@ void ksu_event_queue_drop(struct ksu_event_queue *queue)
     ksu_event_queue_note_drop_locked(queue, seq);
     spin_unlock_irqrestore(&queue->lock, irq_flags);
 
-    wake_up_interruptible_poll(&queue->read_wait, EPOLLIN | EPOLLRDNORM);
+    wake_up_interruptible_poll(&queue->read_wait, POLLIN | POLLRDNORM);
 }
 
 static int ksu_event_queue_wait_ready(struct ksu_event_queue *queue, int file_flags)
@@ -369,9 +376,9 @@ out_unlock:
     return copied;
 }
 
-__poll_t ksu_event_queue_poll(struct ksu_event_queue *queue, struct file *file, poll_table *wait)
+KSU_POLL_T ksu_event_queue_poll(struct ksu_event_queue *queue, struct file *file, poll_table *wait)
 {
-    __poll_t mask = 0;
+    KSU_POLL_T mask = 0;
     unsigned long irq_flags;
 
     poll_wait(file, &queue->read_wait, wait);
@@ -391,7 +398,7 @@ __poll_t ksu_event_queue_poll(struct ksu_event_queue *queue, struct file *file, 
 void ksu_event_queue_close(struct ksu_event_queue *queue)
 {
     ksu_event_queue_mark_closed(queue);
-    wake_up_interruptible_poll(&queue->read_wait, EPOLLHUP | POLLHUP);
+    wake_up_interruptible_poll(&queue->read_wait, POLLHUP);
 }
 
 bool ksu_event_queue_has_data(struct ksu_event_queue *queue)

@@ -12,6 +12,12 @@
 #include <linux/slab.h>
 #include <linux/uaccess.h>
 #include <linux/version.h>
+
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0)
+#define KSU_POLL_T __poll_t
+#else
+#define KSU_POLL_T unsigned int
+#endif
 #include <linux/mount.h>
 
 #include <linux/module.h>
@@ -125,7 +131,7 @@ static int ksu_wrapper_iterate_shared(struct file *fp, struct dir_context *dc)
     return orig->f_op->iterate_shared(orig, dc);
 }
 
-static __poll_t ksu_wrapper_poll(struct file *fp, struct poll_table_struct *pts)
+static KSU_POLL_T ksu_wrapper_poll(struct file *fp, struct poll_table_struct *pts)
 {
     struct ksu_file_wrapper *data = fp->private_data;
     struct file *orig = data->orig;
@@ -332,6 +338,7 @@ static loff_t ksu_wrapper_remap_file_range(struct file *file_in, loff_t pos_in, 
 }
 #endif
 
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0)
 static int ksu_wrapper_fadvise(struct file *fp, loff_t off1, loff_t off2, int flags)
 {
     struct ksu_file_wrapper *data = fp->private_data;
@@ -341,6 +348,7 @@ static int ksu_wrapper_fadvise(struct file *fp, loff_t off1, loff_t off2, int fl
     }
     return -EINVAL;
 }
+#endif
 
 static void ksu_release_file_wrapper(struct ksu_file_wrapper *data);
 
@@ -384,7 +392,7 @@ static struct ksu_file_wrapper *ksu_create_file_wrapper(struct file *fp)
     p->ops.mmap = fp->f_op->mmap ? ksu_wrapper_mmap : NULL;
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 12, 0)
     p->ops.fop_flags = fp->f_op->fop_flags;
-#else
+#elif LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0)
     p->ops.mmap_supported_flags = fp->f_op->mmap_supported_flags;
 #endif
     p->ops.flush = fp->f_op->flush ? ksu_wrapper_flush : NULL;
@@ -407,7 +415,9 @@ static struct ksu_file_wrapper *ksu_create_file_wrapper(struct file *fp)
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 20, 0)
     p->ops.remap_file_range = fp->f_op->remap_file_range ? ksu_wrapper_remap_file_range : NULL;
 #endif
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0)
     p->ops.fadvise = fp->f_op->fadvise ? ksu_wrapper_fadvise : NULL;
+#endif
 
 #if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 6, 0)
     p->ops.splice_eof = fp->f_op->splice_eof ? ksu_wrapper_splice_eof : NULL;
