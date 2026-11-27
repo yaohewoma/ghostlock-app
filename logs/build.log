@@ -133,7 +133,7 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
 -- KernelSU: Git repo detected at /home/runner/work/ghostlock-app/ghostlock-app
--- KernelSU version: 30007
+-- KernelSU version: 30009
 -- KSU_NEW_DCACHE_FLUSH: 0
 -- KernelSU Manager package name: me.weishu.kernelsu
 -- KernelSU Manager signature size: 0x033b
@@ -156,19 +156,24 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/hook/arm64/syscall_hook.o
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/file_wrapper.o
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.o
-In file included from /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:19:
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.h:58:1: error: unknown type name ‘__poll_t’; did you mean ‘__SVBool_t’?
-   58 | __poll_t ksu_event_queue_poll(struct ksu_event_queue *queue, struct file *file, poll_table *wait);
-      | ^~~~~~~~
-      | __SVBool_t
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:379:12: error: conflicting types for ‘ksu_event_queue_poll’; have ‘unsigned int(struct ksu_event_queue *, struct file *, poll_table *)’ {aka ‘unsigned int(struct ksu_event_queue *, struct file *, struct poll_table_struct *)’}
-  379 | KSU_POLL_T ksu_event_queue_poll(struct ksu_event_queue *queue, struct file *file, poll_table *wait)
-      |            ^~~~~~~~~~~~~~~~~~~~
-In file included from /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.c:19:
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.h:58:10: note: previous declaration of ‘ksu_event_queue_poll’ with type ‘int(struct ksu_event_queue *, struct file *, poll_table *)’ {aka ‘int(struct ksu_event_queue *, struct file *, struct poll_table_struct *)’}
-   58 | __poll_t ksu_event_queue_poll(struct ksu_event_queue *queue, struct file *file, poll_table *wait);
-      |          ^~~~~~~~~~~~~~~~~~~~
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/seccomp_cache.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/su_mount_ns.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/symbol_resolver.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/manager/apk_sign.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/manager/pkg_observer.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/manager/throne_tracker.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/app_profile.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/feature.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/runtime/boot_event.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/runtime/ksud_integration.o
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.c: In function ‘migrate_profile’:
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.c:506:9: error: ‘fallthrough’ undeclared (first use in this function)
+  506 |         fallthrough;
+      |         ^~~~~~~~~~~
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.c:506:9: note: each undeclared identifier is reported only once for each function it appears in
+/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.c: At top level:
 cc1: note: unrecognized command-line option ‘-Wno-gcc-compat’ may have been intended to silence earlier diagnostics
-make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/infra/event_queue.o] Error 1
+make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/policy/allowlist.o] Error 1
 make[1]: *** Waiting for unfinished jobs....
 make: *** [Makefile:1748: _module_/home/runner/work/ghostlock-app/ghostlock-app/kernel_module] Error 2
