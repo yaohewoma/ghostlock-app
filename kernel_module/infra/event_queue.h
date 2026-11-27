@@ -9,6 +9,13 @@
 #include <linux/spinlock.h>
 #include <linux/types.h>
 #include <linux/wait.h>
+#include <linux/version.h>
+
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0)
+#define KSU_POLL_T __poll_t
+#else
+#define KSU_POLL_T unsigned int
+#endif
 
 #define KSU_EVENT_RECORD_FLAG_INTERNAL (1U << 0)
 #define KSU_EVENT_QUEUE_TYPE_DROPPED ((__u16)0xFFFF)
@@ -55,7 +62,7 @@ int ksu_event_queue_push(struct ksu_event_queue *queue, __u16 type, __u16 flags,
 void ksu_event_queue_drop(struct ksu_event_queue *queue);
 
 ssize_t ksu_event_queue_read(struct ksu_event_queue *queue, char __user *buf, size_t count, int file_flags);
-__poll_t ksu_event_queue_poll(struct ksu_event_queue *queue, struct file *file, poll_table *wait);
+KSU_POLL_T ksu_event_queue_poll(struct ksu_event_queue *queue, struct file *file, poll_table *wait);
 
 void ksu_event_queue_close(struct ksu_event_queue *queue);
 bool ksu_event_queue_has_data(struct ksu_event_queue *queue);

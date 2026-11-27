@@ -4,12 +4,6 @@
 #include <linux/overflow.h>
 #include <linux/poll.h>
 #include <linux/version.h>
-
-#if LINUX_VERSION_CODE >= KERNEL_VERSION(4, 19, 0)
-#define KSU_POLL_T __poll_t
-#else
-#define KSU_POLL_T unsigned int
-#endif
 #include <linux/slab.h>
 #include <linux/spinlock.h>
 #include <linux/string.h>
