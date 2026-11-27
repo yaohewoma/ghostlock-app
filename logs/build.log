@@ -133,7 +133,7 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
 -- KernelSU: Git repo detected at /home/runner/work/ghostlock-app/ghostlock-app
--- KernelSU version: 30011
+-- KernelSU version: 30013
 -- KSU_NEW_DCACHE_FLUSH: 0
 -- KernelSU Manager package name: me.weishu.kernelsu
 -- KernelSU Manager signature size: 0x033b
@@ -174,10 +174,40 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/sulog/fd.o
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/supercall/dispatch.o
   CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/supercall/perm.o
-/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/sulog/fd.c:23:8: error: unknown type name ‘__poll_t’
-   23 | static __poll_t ksu_sulog_poll(struct file *file, poll_table *wait)
-      |        ^~~~~~~~
-cc1: note: unrecognized command-line option ‘-Wno-gcc-compat’ may have been intended to silence earlier diagnostics
-make[1]: *** [scripts/Makefile.build:356: /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/sulog/fd.o] Error 1
-make[1]: *** Waiting for unfinished jobs....
-make: *** [Makefile:1748: _module_/home/runner/work/ghostlock-app/ghostlock-app/kernel_module] Error 2
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/supercall/supercall.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/feature/adb_root.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/feature/selinux_hide.o
+  CC [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/feature/shell_su_adb_only.o
+  LD [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.o
+  Building modules, stage 2.
+-- KernelSU: Git repo detected at /home/runner/work/ghostlock-app/ghostlock-app
+-- KernelSU version: 30013
+-- KSU_NEW_DCACHE_FLUSH: 0
+-- KernelSU Manager package name: me.weishu.kernelsu
+-- KernelSU Manager signature size: 0x033b
+-- KernelSU Manager signature hash: c371061b19d8c7d7d6133c6a9bafe198fa944e50c1b31c9d8daa8d7f1fc2d2d6
+-- KernelSU is PR Build: 0
+  MODPOST 1 modules
+WARNING: "up_read" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "strchrnul" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "crypto_alloc_shash" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "find_next_bit" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "__pte_to_phys" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "param_ops_bool" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "strncpy_from_user" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "kstrdup" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "mutex_lock_interruptible" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "memstart_addr" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "__rcu_read_unlock" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "up_write" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "down_write" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "fput" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "strrchr" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "fsnotify_add_inode_mark" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "selinux_inode" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "crypto_destroy_tfm" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "__put_task_struct" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "param_ops_ulong" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+WARNING: "krealloc" [/home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko] undefined!
+  CC      /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.mod.o
+  LD [M]  /home/runner/work/ghostlock-app/ghostlock-app/kernel_module/ksu_raw.ko

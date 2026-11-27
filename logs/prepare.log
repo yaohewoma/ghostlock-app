@@ -585,11 +585,11 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_STORAGE_TOOL
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_CAMERA_COMMON
 OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   CHK     include/config/kernel.release
-  CHK     include/generated/uapi/linux/version.h
   WRAP    arch/arm64/include/generated/uapi/asm/errno.h
-  UPD     include/generated/uapi/linux/version.h
-  WRAP    arch/arm64/include/generated/uapi/asm/ioctl.h
+  CHK     include/generated/uapi/linux/version.h
   UPD     include/config/kernel.release
+  WRAP    arch/arm64/include/generated/uapi/asm/ioctl.h
+  UPD     include/generated/uapi/linux/version.h
   WRAP    arch/arm64/include/generated/uapi/asm/ioctls.h
   WRAP    arch/arm64/include/generated/uapi/asm/ipcbuf.h
   WRAP    arch/arm64/include/generated/uapi/asm/kvm_para.h
@@ -612,8 +612,8 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   WRAP    arch/arm64/include/generated/asm/div64.h
   WRAP    arch/arm64/include/generated/asm/dma.h
   WRAP    arch/arm64/include/generated/asm/dma-contiguous.h
-  WRAP    arch/arm64/include/generated/asm/early_ioremap.h
   CHK     include/generated/utsrelease.h
+  WRAP    arch/arm64/include/generated/asm/early_ioremap.h
   WRAP    arch/arm64/include/generated/asm/emergency-restart.h
   WRAP    arch/arm64/include/generated/asm/hw_irq.h
   WRAP    arch/arm64/include/generated/asm/irq_regs.h
@@ -641,15 +641,15 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   CHK     include/generated/timeconst.h
   CC      kernel/bounds.s
   UPD     include/generated/timeconst.h
-  HOSTCC  scripts/dtc/dtc.o
   HOSTCC  scripts/genksyms/genksyms.o
   CC      scripts/mod/empty.o
+  HOSTCC  scripts/dtc/dtc.o
   CHK     include/generated/bounds.h
+  HOSTCC  scripts/mod/mk_elfconfig
   UPD     include/generated/bounds.h
   CC      arch/arm64/kernel/asm-offsets.s
-  HOSTCC  scripts/mod/mk_elfconfig
-  HOSTCC  scripts/dtc/flattree.o
   CC      scripts/mod/devicetable-offsets.s
+  HOSTCC  scripts/dtc/flattree.o
   MKELF   scripts/mod/elfconfig.h
   CHK     scripts/mod/devicetable-offsets.h
   UPD     scripts/mod/devicetable-offsets.h
@@ -660,36 +660,37 @@ OplusKernelEnvConfig.mk:111: myfeature is OPLUS_FEATURE_WIFI_OPLUSWFD
   HOSTCC  scripts/genksyms/parse.tab.o
   HOSTCC  scripts/mod/modpost.o
   HOSTCC  scripts/dtc/fstree.o
-  HOSTCC  scripts/genksyms/lex.lex.o
-  HOSTCC  scripts/dtc/data.o
   CHK     include/generated/asm-offsets.h
+  HOSTCC  scripts/genksyms/lex.lex.o
   UPD     include/generated/asm-offsets.h
   CALL    scripts/checksyscalls.sh
+  HOSTCC  scripts/dtc/data.o
   HOSTCC  scripts/selinux/genheaders/genheaders
   HOSTCC  scripts/dtc/livetree.o
   HOSTCC  scripts/selinux/mdp/mdp
   HOSTCC  scripts/mod/file2alias.o
-  HOSTLD  scripts/genksyms/genksyms
   HOSTCC  scripts/kallsyms
+  HOSTLD  scripts/genksyms/genksyms
   LDS     arch/arm64/kernel/vdso/vdso.lds
   HOSTCC  scripts/dtc/treesource.o
   VDSOA   arch/arm64/kernel/vdso/gettimeofday.o
   VDSOA   arch/arm64/kernel/vdso/note.o
+  HOSTCC  scripts/dtc/srcpos.o
   VDSOA   arch/arm64/kernel/vdso/sigreturn.o
+  HOSTCC  scripts/dtc/checks.o
   LD      arch/arm64/kernel/vdso/vdso.so.dbg
   VDSOSYM include/generated/vdso-offsets.h
-  HOSTCC  scripts/dtc/srcpos.o
-  HOSTCC  scripts/dtc/checks.o
   HOSTCC  scripts/pnmtologo
   HOSTLD  scripts/mod/modpost
+  HOSTCC  scripts/dtc/util.o
+  SHIPPED scripts/dtc/dtc-lexer.lex.c
   HOSTCC  scripts/sortextable
   HOSTCC  scripts/asn1_compiler
-  HOSTCC  scripts/dtc/util.o
   HOSTCC  scripts/sign-file
-  SHIPPED scripts/dtc/dtc-lexer.lex.c
   SHIPPED scripts/dtc/dtc-parser.tab.h
   SHIPPED scripts/dtc/dtc-parser.tab.c
   HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTCC  scripts/extract-cert
 scripts/sign-file.c: In function ‘display_openssl_errors’:
 scripts/sign-file.c:89:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
    89 |         while ((e = ERR_get_error_line(&file, &line))) {
@@ -742,8 +743,6 @@ In file included from scripts/sign-file.c:30:
 /usr/include/openssl/engine.h:638:11: note: declared here
   638 | EVP_PKEY *ENGINE_load_private_key(ENGINE *e, const char *key_id,
       |           ^~~~~~~~~~~~~~~~~~~~~~~
-  HOSTCC  scripts/extract-cert
-  HOSTCC  scripts/dtc/dtc-parser.tab.o
 scripts/extract-cert.c: In function ‘display_openssl_errors’:
 scripts/extract-cert.c:46:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
    46 |         while ((e = ERR_get_error_line(&file, &line))) {
@@ -796,4 +795,5 @@ In file included from scripts/extract-cert.c:24:
 /usr/include/openssl/engine.h:450:27: note: declared here
   450 | OSSL_DEPRECATEDIN_3_0 int ENGINE_ctrl_cmd(ENGINE *e, const char *cmd_name,
       |                           ^~~~~~~~~~~~~~~
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
   HOSTLD  scripts/dtc/dtc
